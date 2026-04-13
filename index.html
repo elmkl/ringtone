@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ringtone - Code a beat, get a cassette</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@strudel/embed@latest"></script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">RINGTONE</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#how">Process</a>
+    <a href="#tools">Tools</a>
+    <a href="#reward">Reward</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="nokia-wrap">
+    <img src="nokia.svg" alt="Nokia 3310" width="129" height="300">
+    <canvas class="nokia-lcd" width="84" height="48" id="lcd"></canvas>
+  </div>
+
+  <div class="hero-text">
+    <h1>Ringtone</h1>
+    <p class="tagline">Code a beat, get a cassette</p>
+    <p class="hero-desc">
+      A Club YSWS where you program music with real code!
+      Write loops and sequences. Hear them instantly. Ship a 1-minute track.
+      Get it pressed on a compilation tape and get a gift card!
+    </p>
+    <a href="#how" class="cta">Learn more →</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="label">// what is this?</div>
+  <h2>Write code, make music, get a cassette & goodies!</h2>
+  <p>
+    Ringtone uses text-based live coding tools such as <a href="https://strudel.cc/" target="_blank"><strong>Strudel</strong></a> (JavaScript, runs in your browser)
+    and <a href="https://sonic-pi.net/" target="_blank"><strong>Sonic Pi</strong></a> (Ruby, desktop app) to turn your code into sound. You write
+    loops, sequences, and effects using real programming concepts: arrays, variables, functions.
+    The output is music you made from scratch!
+  </p>
+  <br>
+  <p>
+    No music experience needed, code IS your instrument.
+    If you've written a for-loop before, you can compose a song.
+  </p>
+
+  <p class="try-it">Try Strudel, hit play:</p>
+
+  <div class="strudel-wrapper">
+    <strudel-repl>
+<!--
+stack(
+  s("bd*2, ~ cp, [~ hh]*4"),
+  note("c2 eb2 ab1 bb1")
+    .s("square")
+    .lpf(400)
+    .decay(.12)
+    .sustain(0)
+).cpm(80)
+-->
+    </strudel-repl>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="how">
+  <div class="label">// the process</div>
+  <h2>4 hours, 4 stages, 1 track</h2>
+  <p>You can get from zero to fully shipped in four hours, tracked via Hackatime.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-hour">HOUR 1</div>
+      <div class="step-title">The Beat</div>
+      <div class="step-desc">Open Strudel in your browser or on a code editor. Program a drum loop and a bassline, you'll be able to hear rhythms in your first 10 minutes.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-hour">HOUR 2</div>
+      <div class="step-title">The Melody</div>
+      <div class="step-desc">Layer in some synthesizers. Shape your sound with effects like reverb, delay, and filters, you will start hearing a song.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-hour">HOUR 3</div>
+      <div class="step-title">The Arrangement</div>
+      <div class="step-desc">Structure your loops into a full 1-minute track. Intro, build, drop, make it evolve!</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-hour">HOUR 4</div>
+      <div class="step-title">The Polish</div>
+      <div class="step-desc">Fine-tune your track and its levels, export the .wav, write a short description, submit to the gallery and get your rewards!</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="tools">
+  <div class="label">// your instruments</div>
+  <h2>Pick your framework!</h2>
+  <p>Both are real programming languages, and both teach real concepts. Choose what fits the best for you!</p>
+
+  <div class="tools">
+    <a href="https://strudel.cc/" target="_blank" class="tool">
+      <div class="tool-name">Strudel ↗</div>
+      <div class="tool-lang">JAVASCRIPT - BROWSER / VS CODE</div>
+      <div class="tool-desc">Zero install. Open strudel.cc and start. Pattern-based music ported from TidalCycles. Perfect for beginners.</div>
+    </a>
+    <a href="https://sonic-pi.net/" target="_blank" class="tool">
+      <div class="tool-name">Sonic Pi ↗</div>
+      <div class="tool-lang">RUBY - DESKTOP</div>
+      <div class="tool-desc">Desktop app with built-in tutorials. Designed for education, used in schools worldwide.</div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="reward" class="reward">
+  <div class="label">// you ship, we ship</div>
+  <h2>Your reward!</h2>
+
+  <div class="cassette-wrapper">
+    <img src="cassette.svg" alt="Cassette Tape" class="cassette-img">
+
+
+    <div class="cassette-label-overlay">
+      <div class="cass-name">Ringtone</div>
+    </div>
+
+    <div class="handwritten-note">
+      <span class="arrow-text">→</span>
+      <span>your song<br>inside!</span>
+    </div>
+  </div>
+
+  <div class="rewards-row">
+    <div class="reward-card">
+      <div class="reward-card-title">Compilation Cassette</div>
+      <div class="reward-card-desc">Your track on a shared cassette tape, shipped to your door. Every 25 submissions fills one volume, you'll be part of a real album!</div>
+    </div>
+    <div class="reward-card">
+      <div class="reward-card-title">$10 Music Card</div>
+      <div class="reward-card-desc">Spotify, Bandcamp, or Deezer, to support your listening habits!</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="gallery">
+  <div class="label">// the gallery</div>
+  <h2>Ringtone Vol. 1</h2>
+  <p>Every track lives in the gallery, they are playable, with source code visible, and organized by volume.</p>
+
+  <div class="tracks empty-state">
+    <p class="empty-title">Waiting for submissions...</p>
+    <p class="empty-sub">Vol. 1 is currently open. Your track will appear here!</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="faq">
+  <div class="label">// q & a</div>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q">What exactly is Ringtone?</div>
+      <div class="faq-a">It is a YSWS program where you learn to program music using text-based live coding tools. You'll be able to write real code that produces real music.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do I need to know how to play an instrument?</div>
+      <div class="faq-a">No previous music experience is needed. Coding IS the instrument in this case, acting as a gateway for you to unlock your creative (or programming) side.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I track my 4 hours for the grant?</div>
+      <div class="faq-a">Beginners can use browser tracking with a short journal entry after each hour. Experienced users can log IDE-specific telemetry using Strudel's VS Code extension and Hackatime.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does this mean music is Turing-complete?</div>
+      <div class="faq-a"><a href="https://x.com/EmanueleRodola/status/2042509481221767633" target="_blank">No.</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>RINGTONE - A <a href="https://hackclub.com">HACK CLUB</a> YSWS</p>
+</footer>
+
+<script src="lcd.js"></script>
+
+</body>
+</html>
